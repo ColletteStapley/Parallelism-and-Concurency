@@ -57,7 +57,7 @@ if __name__ == '__main__':
     thread_range = range_count // number_threads
 
     # Create threads and give each one a range to test
-    for i in range(10):
+    for i in range(number_threads):
         thread_start = start + (thread_range * i)
         thread_end = thread_start + thread_range
         t = threading.Thread(target=process_range, args=(thread_start, thread_end))
